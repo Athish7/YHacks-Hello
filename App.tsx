@@ -65,10 +65,14 @@ const UserCard: React.FC<{ user: User; onClick: (user: User) => void }> = ({ use
 };
 
 const HomePage: React.FC<{ onNavigate: (page: 'directory') => void }> = ({ onNavigate }) => {
+  const featuredInnovators = users.slice(0, 3);
+
   return (
-    <div className="text-center py-16">
-        <img 
-          src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=2070&auto=format&fit=crop" 
+    <div className="space-y-16 md:space-y-24">
+      {/* Hero Section */}
+      <div className="text-center pt-8 md:pt-16">
+        <img
+          src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=2070&auto=format&fit=crop"
           alt="Abstract representation of innovation and technology"
           className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl mb-12 h-64 object-cover"
         />
@@ -83,6 +87,44 @@ const HomePage: React.FC<{ onNavigate: (page: 'directory') => void }> = ({ onNav
           Meet the Innovators
         </button>
       </div>
+
+      {/* Additional Info Sections */}
+      <div className="max-w-5xl mx-auto space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Our Mission</h2>
+            <p className="mt-4 text-gray-600 dark:text-gray-300">
+              Our mission is to shine a spotlight on the exceptional engineers who have graduated from Canadian universities and gone on to build remarkable, high-growth companies. We aim to inspire the next generation of innovators and foster a community that celebrates Canadian ingenuity and entrepreneurial spirit.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Why Canadian Engineering?</h2>
+            <p className="mt-4 text-gray-600 dark:text-gray-300">
+              Canada is home to world-class engineering programs renowned for their rigorous curriculum and cutting-edge research. This strong academic foundation, combined with a vibrant startup ecosystem, creates the perfect environment for turning bold ideas into global success stories.
+            </p>
+          </div>
+        </div>
+
+        {/* Featured Innovators */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Featured Innovators</h2>
+          <p className="mt-2 text-gray-600 dark:text-gray-300">A glimpse into the brilliant minds in our directory.</p>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {featuredInnovators.map(user => (
+              <div key={user.id} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                <img
+                  className="w-24 h-24 rounded-full object-cover mx-auto"
+                  src={user.imageUrl}
+                  alt={`Profile of ${user.name}`}
+                />
+                <h3 className="mt-4 text-lg font-semibold text-gray-800 dark:text-white">{user.name}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{user.bio.split(',')[0]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -125,7 +167,7 @@ const DirectoryPage: React.FC<{ onCardClick: (user: User) => void }> = ({ onCard
           />
         </div>
       </div>
-      
+
       {filteredUsers.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {filteredUsers.map(user => (
@@ -149,7 +191,7 @@ const AboutPage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1">
           <img
-            src="https://images.unsplash.com/photo-1639747525399-d4c2d3b37d26?q=80&w=1887&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop"
             alt="Portrait of the visionary Athish Thirukaran"
             className="rounded-lg shadow-2xl object-cover w-full h-full object-top"
           />
@@ -173,7 +215,42 @@ const AboutPage: React.FC = () => {
   );
 };
 
-type Page = 'home' | 'directory' | 'about';
+const TopInnovatorsPage: React.FC = () => {
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 md:p-12">
+      <header className="text-center mb-8">
+        <h1 className="text-5xl font-extrabold text-gray-800 dark:text-white">Caaviyan & Sintheya: A Billion-Dollar Partnership</h1>
+        <p className="mt-2 text-lg text-gray-600 dark:text-gray-300">The Power Couple of Canadian Tech</p>
+      </header>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+        <div className="md:col-span-1">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop"
+            alt="Portrait of the innovators Caaviyan and Sintheya"
+            className="rounded-lg shadow-2xl object-cover w-full h-full"
+          />
+        </div>
+        <div className="md:col-span-2 text-gray-700 dark:text-gray-300 space-y-4 text-lg">
+          <p>
+            Caaviyan and Sintheya, both distinguished graduates of the University of Waterloo’s renowned systems design engineering program, are the embodiment of collaborative genius. They met during a late-night study session and quickly discovered a shared passion for solving the world's most complex problems.
+          </p>
+          <p>
+            Together, they co-founded <strong className="text-primary dark:text-blue-400">Nexus Dynamics</strong>, a trailblazing company that leverages artificial intelligence to create sustainable energy solutions. Their flagship product, an AI-powered grid management system, has revolutionized power distribution, cutting energy waste by over 40% in major cities.
+          </p>
+          <p>
+            From a humble start in a university incubator to a billion-dollar valuation, their journey is a masterclass in innovation and partnership. Their company not only leads the market but also sets the standard for corporate responsibility and sustainable growth.
+          </p>
+          <p className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4 italic">
+            Caaviyan and Sintheya prove that the greatest innovations come from brilliant minds working in perfect harmony. They are not just our top innovators; they are the future of Canadian engineering.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+type Page = 'home' | 'directory' | 'about' | 'innovators';
 
 const Navbar: React.FC<{
   currentPage: Page;
@@ -182,7 +259,7 @@ const Navbar: React.FC<{
   const linkClasses = "px-4 py-2 rounded-md text-sm font-medium transition-colors";
   const activeClasses = "bg-primary text-white";
   const inactiveClasses = "text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700";
-  
+
   return (
     <nav className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm sticky top-0 z-40 mb-8 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,6 +288,13 @@ const Navbar: React.FC<{
               aria-current={currentPage === 'about' ? 'page' : undefined}
              >
               About Athish
+             </button>
+             <button
+              onClick={() => onNavigate('innovators')}
+              className={`${linkClasses} ${currentPage === 'innovators' ? activeClasses : inactiveClasses}`}
+              aria-current={currentPage === 'innovators' ? 'page' : undefined}
+             >
+              Top Innovators
              </button>
           </div>
         </div>
@@ -244,6 +328,7 @@ const App: React.FC = () => {
             {currentPage === 'home' && <HomePage onNavigate={navigate} />}
             {currentPage === 'directory' && <DirectoryPage onCardClick={handleCardClick} />}
             {currentPage === 'about' && <AboutPage />}
+            {currentPage === 'innovators' && <TopInnovatorsPage />}
           </div>
         </main>
       </div>

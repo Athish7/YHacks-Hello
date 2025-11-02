@@ -63,4 +63,12 @@ export const users = [
     bio: "As a systems design engineering graduate from the University of Waterloo, Hannah founded 'ConnectSphere,' a SaaS platform for remote team collaboration that serves thousands of businesses worldwide.",
     imageUrl: 'https://i.pravatar.cc/150?img=8',
   },
+  {
+    id: 9,
+    name: 'Ian Martinez',
+    email: 'ian.m@example.com',
+    phone: '901-234-5678',
+    bio: "An alumnus of Dalhousie University with a degree in chemical engineering, Ian founded 'BioSynth Labs,' a biotech firm that develops sustainable alternatives to plastics, recently valued at over $20 million.",
+    imageUrl: 'https://i.pravatar.cc/150?img=9',
+  },
 ];
