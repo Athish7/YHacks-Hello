@@ -4,7 +4,7 @@ export const users = [
     name: 'Alice Johnson',
     email: 'alice.j@example.com',
     phone: '123-456-7890',
-    bio: 'Frontend developer with a passion for creating beautiful and intuitive user interfaces. Loves hiking and photography.',
+    bio: "A civil engineering graduate from the University of Waterloo, Alice founded 'TerraForm Inc.', a multi-million dollar construction tech company that revolutionizes urban infrastructure projects with AI-driven planning tools.",
     imageUrl: 'https://i.pravatar.cc/150?img=1',
   },
   {
@@ -12,7 +12,7 @@ export const users = [
     name: 'Bob Williams',
     email: 'bob.w@example.com',
     phone: '234-567-8901',
-    bio: 'Backend engineer specializing in scalable systems and cloud infrastructure. Enjoys playing chess and cooking.',
+    bio: "With a degree in software engineering from the University of British Columbia, Bob launched 'QuantumLeap AI,' a leading firm in machine learning solutions, now valued at over $50 million.",
     imageUrl: 'https://i.pravatar.cc/150?img=2',
   },
   {
@@ -20,7 +20,7 @@ export const users = [
     name: 'Charlie Brown',
     email: 'charlie.b@example.com',
     phone: '345-678-9012',
-    bio: 'UI/UX designer focused on user-centered design principles. Avid reader and traveler.',
+    bio: "An electrical engineering alumnus from McGill University, Charlie is the founder of 'Volt-Tech Renewables,' a company at the forefront of sustainable energy, specializing in next-generation solar panel technology.",
     imageUrl: 'https://i.pravatar.cc/150?img=3',
   },
   {
@@ -28,7 +28,7 @@ export const users = [
     name: 'Diana Miller',
     email: 'diana.m@example.com',
     phone: '456-789-0123',
-    bio: 'Full-stack developer who enjoys tackling complex problems. Spends free time kayaking and building custom keyboards.',
+    bio: "After graduating in mechanical engineering from Queen's University, Diana created 'AeroDynamics,' a multi-million dollar enterprise that designs and manufactures cutting-edge drones for logistical and agricultural use.",
     imageUrl: 'https://i.pravatar.cc/150?img=4',
   },
   {
@@ -36,7 +36,7 @@ export const users = [
     name: 'Ethan Davis',
     email: 'ethan.d@example.com',
     phone: '567-890-1234',
-    bio: 'Project manager ensuring projects are delivered on time and on budget. Also a certified yoga instructor.',
+    bio: "A computer engineering graduate from the University of Alberta, Ethan co-founded 'CyberSecure,' a cybersecurity firm that protects major financial institutions and is now a leader in the industry.",
     imageUrl: 'https://i.pravatar.cc/150?img=5',
   },
   {
@@ -44,7 +44,7 @@ export const users = [
     name: 'Fiona Garcia',
     email: 'fiona.g@example.com',
     phone: '678-901-2345',
-    bio: 'Data scientist who loves finding patterns in data. Enjoys cycling and painting watercolors.',
+    bio: "Fiona, a biomedical engineering graduate from McMaster University, is the CEO of 'MedInnovate,' a company that develops groundbreaking medical devices and has secured millions in funding.",
     imageUrl: 'https://i.pravatar.cc/150?img=6',
   },
   {
@@ -52,7 +52,7 @@ export const users = [
     name: 'George Rodriguez',
     email: 'george.r@example.com',
     phone: '789-012-3456',
-    bio: 'DevOps engineer passionate about automation and CI/CD pipelines. A big fan of sci-fi movies.',
+    bio: "Holding a degree in materials engineering from the University of Toronto, George started 'Polymeric Solutions,' a company that creates advanced, eco-friendly polymers for manufacturing, reaching an eight-figure valuation.",
     imageUrl: 'https://i.pravatar.cc/150?img=7',
   },
   {
@@ -60,7 +60,7 @@ export const users = [
     name: 'Hannah Wilson',
     email: 'hannah.w@example.com',
     phone: '890-123-4567',
-    bio: 'Mobile developer for both iOS and Android platforms. Loves dogs and volunteers at a local animal shelter.',
+    bio: "As a systems design engineering graduate from the University of Waterloo, Hannah founded 'ConnectSphere,' a SaaS platform for remote team collaboration that serves thousands of businesses worldwide.",
     imageUrl: 'https://i.pravatar.cc/150?img=8',
   },
 ];
